@@ -5319,11 +5319,11 @@ var $elm$core$Task$perform = F2(
 				A2($elm$core$Task$map, toMessage, task)));
 	});
 var $elm$browser$Browser$element = _Browser_element;
-var $author$project$Main$Loading = {$: 'Loading'};
+var $author$project$Main$ShowButton = {$: 'ShowButton'};
 var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $elm$core$Platform$Cmd$none = $elm$core$Platform$Cmd$batch(_List_Nil);
 var $author$project$Main$init = function (_v0) {
-	return _Utils_Tuple2($author$project$Main$Loading, $elm$core$Platform$Cmd$none);
+	return _Utils_Tuple2($author$project$Main$ShowButton, $elm$core$Platform$Cmd$none);
 };
 var $elm$core$Platform$Sub$batch = _Platform_batch;
 var $elm$core$Platform$Sub$none = $elm$core$Platform$Sub$batch(_List_Nil);
@@ -5334,6 +5334,7 @@ var $author$project$Main$Failure = {$: 'Failure'};
 var $author$project$Main$GotText = function (a) {
 	return {$: 'GotText', a: a};
 };
+var $author$project$Main$Loading = {$: 'Loading'};
 var $author$project$Main$Success = function (a) {
 	return {$: 'Success', a: a};
 };

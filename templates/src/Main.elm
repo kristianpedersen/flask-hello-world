@@ -33,7 +33,7 @@ type Model
 
 init : () -> ( Model, Cmd Msg )
 init _ =
-    ( Loading
+    ( ShowButton
     , Cmd.none
     )
 
