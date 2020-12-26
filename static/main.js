@@ -6166,7 +6166,7 @@ var $author$project$Main$view = function (model) {
 	switch (model.$) {
 		case 'Failure':
 			return $elm$html$Html$text('oi');
-		case 'Loading':
+		case 'ShowButton':
 			return A2(
 				$elm$html$Html$button,
 				_List_fromArray(
@@ -6178,6 +6178,8 @@ var $author$project$Main$view = function (model) {
 					[
 						$elm$html$Html$text('Load data from Python backend')
 					]));
+		case 'Loading':
+			return $elm$html$Html$text('beep boop lol');
 		default:
 			var fullText = model.a;
 			return A2(

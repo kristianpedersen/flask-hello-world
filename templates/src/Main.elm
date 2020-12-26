@@ -26,6 +26,7 @@ main =
 
 type Model
     = Failure
+    | ShowButton
     | Loading
     | Success String
 
@@ -60,7 +61,7 @@ update msg model =
         ButtonClicked ->
             ( Loading
             , Http.get
-                { url = "/info" -- or "http://localhost:5000/info"
+                { url = "/info"
                 , expect = Http.expectString GotText
                 }
             )
@@ -85,8 +86,11 @@ view model =
         Failure ->
             text "oi"
 
-        Loading ->
+        ShowButton ->
             button [ onClick ButtonClicked, style "padding" "1rem" ] [ text "Load data from Python backend" ]
+
+        Loading ->
+            text "beep boop lol"
 
         Success fullText ->
             pre [] [ text fullText ]

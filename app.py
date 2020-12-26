@@ -2,20 +2,11 @@
 from astropy import units as u
 from astropy.coordinates import EarthLocation, get_body, get_sun, solar_system_ephemeris
 from astropy.time import Time
-from flask import Flask, send_from_directory, render_template
+from flask import Flask, render_template
 import math
-import os
 
-# Show index.html
 app = Flask(__name__)
 
-
-@app.route('/')
-def index():
-    return render_template("index.html")
-
-
-# Astropy setup
 planets = [
     "Mercury",
     "Venus",
@@ -73,3 +64,8 @@ def get_planet_info():
             }
 
     return planet_info
+
+
+@app.route('/')
+def index():
+    return render_template("index.html")
